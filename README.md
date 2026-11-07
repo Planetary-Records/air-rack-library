@@ -1,15 +1,11 @@
-# AIR rack library
+# AIR rack sources
 
-Curated racks for AIR, with native previews and independently versioned downloads.
+Browse and contribute AIR racks here. Each folder under `racks/` contains readable module recipes, defaults, control bindings, faceplate assets, screenshots and original notices. Downloads remain available in Releases and through AIR's Library.
 
-Open **Library** in AIR to browse screenshots, descriptions, compatibility and download counts. Filter by Synth or FX, search, or select tags such as drums, analog, reverb and saturator. A rack must match every selected tag.
+An `.airrack` is a standard ZIP of data. AIR supplies the shared native audio engines; these folders do not contain independently compiled DSP plugins. New combinations, bindings and skins can be contributed here. A new native algorithm or editor requires a change to AIR itself.
 
-Choose **Install** to make a rack available, then **Add** to place it in the current sound. Installed racks remain available offline. AIR supplies the shared sound engines; the Library shows which releases work with your AIR version.
+Start with [CONTRIBUTING](CONTRIBUTING.md). Python 3.12 or later and the standard library are enough to prepare and build a rack. A compatible AIR developer preview executable is needed to see and play the result.
 
-Updates are explicit. Saved projects keep their exact rack versions and sound data. Older installed versions remain available until deliberately removed; the detail page provides release management. If artwork is missing, the saved sound remains editable with AIR controls and **Restore** can retrieve the exact artwork.
+`racks/<id>/` is editable current source. `releases/<id>/<version>/<archive-sha256>/` retains the exact inputs for a download. `SOURCE-INDEX.json` maps downloads to those immutable directories. Source checksums cover the prepared source snapshot. Existing downloaded versions and saved projects retain their own identities; source changes do not update a sound automatically.
 
-Downloads are available under [Releases](https://github.com/Planetary-Records/air-rack-library/releases). AIR reads the root catalog and tag vocabulary. Versioned release assets are immutable and previous versions are retained.
-
-The download count is GitHub's recorded rack-package downloads across released versions. It can include repeat downloads and does not represent unique users or successful installations.
-
-Each rack package contains its applicable notices. Releases also include aggregated original notices and immutable asset checksums.
+Original contributions use [AGPL-3.0-only](LICENSE), subject to each rack's original artwork/font/third-party notices. Keep all applicable notices. This repository has no automatic executor for untrusted contributions.
